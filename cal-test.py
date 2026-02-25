@@ -12,9 +12,9 @@ cal = calendar.Calendar(firstweekday=6)  # 0=Monday
 daysofweek = {i: name for i, name in enumerate(calendar.day_name)}
 
 # Set Sunday (6) as the first weekday and print its name
-# calendar.setfirstweekday(6)
+calendar.setfirstweekday(6)
 
-# print(daysofweek[calendar.firstweekday()])
+print(f"The first day of the week is {daysofweek[calendar.firstweekday()]}")
 
 yy = 2026
 mm = 2
