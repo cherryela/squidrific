@@ -4,9 +4,9 @@ from datetime import date
 def get_century() -> int:
     while True:
         try:
-            raw_value = input("Please enter a century between 1 and 99: ").strip()
+            raw_value = input("Please enter a century between 1 and 100: ").strip()
             if not raw_value:
-                print("Input cannot be empty. Please enter a whole number between 1 and 99.")
+                print("Input cannot be empty. Please enter a whole number between 1 and 100.")
                 continue
 
             century_value = int(raw_value)
