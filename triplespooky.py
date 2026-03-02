@@ -10,13 +10,13 @@ def get_century() -> int:
                 continue
 
             century_value = int(raw_value)
-            if 1 <= century_value <= 99:
+            if 1 <= century_value <= 100:
                 print("Thank you for your input.")
                 return century_value
 
-            print("Invalid input. Please enter a value between 1 and 99.")
+            print("Invalid input. Please enter a value between 1 and 100.")
         except ValueError:
-            print("Invalid input. Please enter a whole number between 1 and 99.")
+            print("Invalid input. Please enter a whole number between 1 and 100.")
         except (KeyboardInterrupt, EOFError):
             print("\nInput canceled.")
             raise SystemExit(1)
@@ -28,6 +28,7 @@ start_year = (century - 1) * 100 + 1
 end_year = start_year + 99
 
 print("The following years have three Friday the 13ths:")
+
 for year in range(start_year, end_year):
     friday_13_count = 0
     
